@@ -27,13 +27,22 @@
             margin: 10px;
         }
 
-        /* Top Logo Container */
+        /* Top Logo Slider */
         .top-logo-container {
             display: flex;
-            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 120px;
+            background-color: #fff;
+            justify-content: flex-start;
             align-items: center;
-            gap: 20px;
-            padding: 20px;
+        }
+
+        .logo-track {
+            display: flex;
+            animation: slide 8s linear infinite;
+            width: calc(8 * 20%); /* Assuming 8 images */
         }
 
         .top-logo-container img {
@@ -41,15 +50,24 @@
             height: auto;
         }
 
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
         /* Bottom Slideshow Styles */
         .bottom-slideshow-container {
             width: 60%;
             height: 250px;
             position: relative;
-            margin: 0 auto; /* Horizontally center */
+            margin: 0 auto;
             display: flex;
-            align-items: center; /* Vertically center */
-            justify-content: center; /* Horizontally center within flexbox */
+            align-items: center;
+            justify-content: center;
         }
 
         .bottom-slideshow-container img {
@@ -189,9 +207,16 @@
 
     <!-- Top Logos -->
     <div class="top-logo-container">
-        <img src="logo1.png" alt="Logo 1">
-        <img src="logo3.png" alt="Logo 3">
-        <img src="logo2.png" alt="Logo 2">
+        <div class="logo-track">
+            <img src="logo1.png" alt="Logo 1">
+            <img src="logo3.png" alt="Logo 3">
+            <img src="logo2.png" alt="Logo 2">
+            <img src="logo8.png" alt="Logo 8">
+            <img src="logo9.png" alt="Logo 9">
+            <img src="logo10.png" alt="Logo 10">
+            <img src="logo11.png" alt="Logo 11">
+            <img src="logo1.png" alt="Logo 1"> <!-- Repeated for seamless loop -->
+        </div>
     </div>
 
     <div class="content">
@@ -199,31 +224,37 @@
             <h2>ARISE (Africa Research, Implementation Science and Education) Network</h2>
             <p>
                 The ARISE Network is a network for collaborative education and research activities in Africa.
-                ARISE comprises health experts and institutions from Harvard University, the Africa Academy of Public
-                Health in Tanzania, Botswana, Burkina Faso, Ethiopia, Ghana, Nigeria, South Africa, and Uganda who
-                share similar ambitions.
+                ARISE comprises health experts and institutions from Harvard University, the Africa Academy of Public Health in Tanzania, Botswana, Burkina Faso, Ethiopia, Ghana, Nigeria, South Africa, and Uganda who share similar ambitions.
+                Presenting ARISE projects:
+                <br>1. Botnar
+                <br>2. Nutrient
+                <br>3. Dash
             </p>
         </div>
         <div class="content-right">
-            <img src="logo4.png" alt="Logo 4">
+            <img src="logo7.png" alt="Logo 7">
         </div>
     </div>
 
     <div class="tab">
-        <a href="ARISE_Data_Request_Form.docx" download>Download ARISE Data Request Form</a>
+        <a href="/static/ARISE_Data_Request_Form.docx" download>Download ARISE Data Request Form</a>
     </div>
 
-    <div class="objectives">
-        <h3>Objective</h3>
+    <div class="Objectives and Research Tasks">
+        <h3>Objectives</h3>
         <p>
-            Boosting Adolescent Health in SSA Through Rigorous Population-based Intervention and Policy Research
+            Objective 1: Determine the key health risk factors and intervention needs among adolescents in SSA.
+            <br>RT1: Health and Demographic Surveys for collecting harmonized adolescent health data.
+            <br>Objective 2: Develop a methodological framework for researching adolescent health interventions in SSA.
+            <br>RT2: Methods for design, evaluation, and transportability of interventions.
+            <br>Objective 3: Locally design and pilot test adolescent health literacy and nudge interventions.
+            <br>Objective 4: Establish effects, impacts, and mechanisms of adolescent health literacy and nudge interventions on health knowledge and understanding, health behaviors, and outcomes in SSA.
+            <br>RT3: Adolescent health interventions to improve nutrition & physical activity.
+            <br>RT4: Adolescent health interventions to improve sexual & reproductive health.
+            <br>RT5: Adolescent health interventions to improve mental health & violence.
+            <br>Objective 5: Establish effects, impacts, and mechanisms of key national and regional adolescent health policies in SSA.
+            <br>RT6: Evaluation of population-level adolescent health policies.
         </p>
-        <h3>Presenting ARISE Projects</h3>
-        <ul>
-            <li>Botnar</li>
-            <li>Nutrient</li>
-            <li>Dash</li>
-        </ul>
     </div>
 
     <!-- Bottom Slideshow -->
